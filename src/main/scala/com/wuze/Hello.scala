@@ -15,7 +15,7 @@ object Hello {
 //      println("pair(0) :" + pair(0) + "pair(1) :" + pair(1) )
 //    })
     val wc=aa.flatMap(line =>line.split(",")).map(x=>(x,1)).reduceByKey(_+_);
-
+//
     //控制台输出结果
     wc.collect().foreach(println)
     val cc = aa.saveAsTextFile(output)
